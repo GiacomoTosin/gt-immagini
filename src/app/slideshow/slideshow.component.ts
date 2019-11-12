@@ -13,7 +13,10 @@ export class SlideshowComponent implements OnInit {
   }
   x = 0;
 
-  link = [''];
+  link = ['',
+  '',
+  '',
+  ];
 
   numero = this.link[this.x];
 
@@ -34,6 +37,9 @@ export class SlideshowComponent implements OnInit {
       this.x = this.x - 1;
       this.numero = this.link[this.x];
     }
+  }
+  scambiatimer(){
+    
   }
 
 }
