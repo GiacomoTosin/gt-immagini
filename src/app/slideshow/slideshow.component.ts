@@ -11,6 +11,7 @@ export class SlideshowComponent implements OnInit {
 
   ngOnInit() {
   }
+  timer;
   x = 0;
 
   link = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQNGfD_Vi3uXEc8cjUcUPOseRKf0xwAKhe6ZSyJMKj0BKQTBox&s',
@@ -22,7 +23,7 @@ export class SlideshowComponent implements OnInit {
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRgsN9VxiqLKJBCOFvdJzH59vRTfoa1lPk9wKGFsMQzO4o6D0j&s',
 
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnSgbeoHhSqjWSQo3CNdtGvP0-1GyPTAhR9scBlwbwPpEJXu5h&s',
-  
+
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDaeFz6yILI7GlL8jzqqWy99WRXj3EWM9pY4Q8gf9g7S9Fv1NuNg&s'
   ];
 
@@ -46,8 +47,17 @@ export class SlideshowComponent implements OnInit {
       this.numero = this.link[this.x];
     }
   }
-  scambiatimer(){
-    
+  auto(){
+    this.timer = setInterval(() =>{
+      if (this.x == 5){
+        this.x = 0
+      }else{
+        this.x = this.x + 1;
+        this.numero = this.link[this.x];
+      }
+    }, 1000); 
   }
-
+  stop(){
+    clearInterval(this.timer);
+  }
 }

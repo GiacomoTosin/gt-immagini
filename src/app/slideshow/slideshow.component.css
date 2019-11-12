@@ -3,3 +3,11 @@ button{
   width: 32px;
   
 }
+auto{
+  height: 64;
+  width: 128px;
+}
+stop{
+    height: 64;
+  width: 128px;
+}
