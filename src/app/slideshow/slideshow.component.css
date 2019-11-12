@@ -1,13 +1,5 @@
-button{
-  height: 64px;
-  width: 32px;
-  
-}
-auto{
-  height: 64;
-  width: 128px;
-}
-stop{
-    height: 64;
+
+.button{
+  height: 32px;
   width: 128px;
 }
